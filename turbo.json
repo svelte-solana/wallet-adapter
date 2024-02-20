@@ -2,8 +2,22 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".svelte-kit/**", ".vercel/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".svelte-kit/**",
+        ".vercel/**"
+      ]
+    },
+    "package": {
+      "dependsOn": [
+        "^package"
+      ],
+      "outputs": [
+        "dist/**",
+        ".svelte-kit/**"
+      ]
     },
     "lint": {},
     "dev": {
