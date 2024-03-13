@@ -1,7 +1,13 @@
 <script lang="ts">
-	import { MyCounterButton } from '@svelte-solana/ui';
+	import { WalletMultiButton } from '@svelte-solana/ui';
+	import { walletStore } from '@svelte-solana/core';
+
+	$: if ($walletStore.connected) {
+		console.log('Connected to wallet: ', $walletStore.adapter?.name);
+	}
 </script>
 
 <h1>Web</h1>
-<MyCounterButton />
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+<WalletMultiButton />
+<button>Yolo</button>

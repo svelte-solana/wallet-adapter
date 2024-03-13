@@ -15,17 +15,20 @@
 		"test:unit": "vitest"
 	},
 	"dependencies": {
+		"@solana/wallet-adapter-wallets": "^0.19.31",
+		"@solana/web3.js": "^1.90.0",
+		"@svelte-solana/core": "workspace:*",
 		"@svelte-solana/ui": "workspace:*"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.40.1",
+		"@svelte-solana/eslint-config": "workspace:*",
 		"@sveltejs/adapter-auto": "^3.1.0",
 		"@sveltejs/kit": "^2.0.6",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
 		"@typescript-eslint/eslint-plugin": "^6.17.0",
 		"@typescript-eslint/parser": "^6.17.0",
 		"eslint": "^8.56.0",
-		"@svelte-solana/eslint-config": "workspace:*",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"svelte": "^4.2.8",

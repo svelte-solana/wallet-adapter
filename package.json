@@ -3,6 +3,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "package": "turbo run package",
+    "package:watch": "turbo run package:watch",
     "lint": "turbo run lint",
     "format": "prettier --write ."
   },

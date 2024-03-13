@@ -19,6 +19,15 @@
         ".svelte-kit/**"
       ]
     },
+    "package:watch": {
+      "dependsOn": [
+        "^package"
+      ],
+      "outputs": [
+        "dist/**",
+        ".svelte-kit/**"
+      ]
+    },
     "lint": {},
     "dev": {
       "cache": false,
