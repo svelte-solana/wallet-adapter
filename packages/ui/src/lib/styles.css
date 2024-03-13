@@ -5,7 +5,7 @@
     border: none;
     color: #fff;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-family: 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -59,7 +59,7 @@
 
 .wallet-adapter-dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .wallet-adapter-dropdown-list {

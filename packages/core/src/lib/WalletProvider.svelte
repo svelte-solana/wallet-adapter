@@ -6,7 +6,7 @@
 	} from '@solana/wallet-adapter-base';
 	import { StandardWalletAdapter } from '@solana/wallet-standard-wallet-adapter-base';
 	import { getWallets } from '@wallet-standard/app';
-	import { initialize } from '@svelte-solana/core';
+	import { initialize } from './walletStore.js';
 	import type { Adapter, WalletError } from '@solana/wallet-adapter-base';
 
 	export let localStorageKey: string,
@@ -18,6 +18,10 @@
 
 	function updateWallets() {
 		// get installed wallets compatible with the standard
+		if (wallets.length > 0) {
+			initialize({ wallets, autoConnect, localStorageKey, onError });
+			return;
+		}
 		const { get } = getWallets();
 		const standardWallets = get()
 			.filter(isWalletAdapterCompatibleStandardWallet)

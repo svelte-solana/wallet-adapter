@@ -1,14 +1,14 @@
 {
-	"name": "@svelte-solana/core",
+	"name": "@svelte-solana/headless-ui",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && pnpm run package",
+		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"package:watch": "svelte-kit sync && svelte-package -w",
-		"prepublishOnly": "pnpm run package",
-		"test": "pnpm run test:integration && pnpm prun test:unit",
+		"prepublishOnly": "npm run package",
+		"test": "npm run test:integration && npm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
@@ -30,6 +30,9 @@
 	"peerDependencies": {
 		"svelte": "^4.0.0"
 	},
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
 		"@svelte-solana/eslint-config": "workspace:*",
@@ -37,9 +40,9 @@
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@types/eslint": "8.56.0",
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
+		"@types/eslint": "^8.56.0",
+		"@typescript-eslint/eslint-plugin": "^7.0.0",
+		"@typescript-eslint/parser": "^7.0.0",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
@@ -53,13 +56,11 @@
 		"vite": "^5.0.11",
 		"vitest": "^1.2.0"
 	},
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"type": "module",
 	"dependencies": {
 		"@solana/wallet-adapter-base": "^0.9.23",
 		"@solana/wallet-standard-wallet-adapter-base": "^1.1.2",
 		"@solana/web3.js": "^1.90.0",
+		"@svelte-solana/core": "workspace:*",
 		"@wallet-standard/app": "^1.0.1"
 	}
 }

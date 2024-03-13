@@ -91,7 +91,7 @@
 				</li>
 				<li role="menuitem">
 					<button class="wallet-adapter-dropdown-list-item" on:click={openModal}>
-						Connect a different wallet
+						Change wallet
 					</button>
 				</li>
 				<li role="menuitem">

@@ -1,13 +1,18 @@
 <script lang="ts">
 	import { WalletMultiButton } from '@svelte-solana/ui';
 	import { walletStore } from '@svelte-solana/core';
+	import { WalletConnectButton, CopyAddressToClipboardButton } from '@svelte-solana/headless-ui';
 
 	$: if ($walletStore.connected) {
 		console.log('Connected to wallet: ', $walletStore.adapter?.name);
 	}
+	$: console.log($walletStore.wallets);
 </script>
 
 <h1>Web</h1>
 
-<WalletMultiButton />
-<button>Yolo</button>
+<div>
+	<WalletMultiButton />
+	<CopyAddressToClipboardButton />
+	<WalletConnectButton wallet={$walletStore.wallets[0]}>Connect</WalletConnectButton>
+</div>

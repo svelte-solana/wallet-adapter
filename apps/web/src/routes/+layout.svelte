@@ -9,19 +9,15 @@
 	let wallets: Adapter[];
 
 	onMount(async () => {
-		const { PhantomWalletAdapter, SolflareWalletAdapter, TorusWalletAdapter } = await import(
+		const { PhantomWalletAdapter, SolflareWalletAdapter } = await import(
 			'@solana/wallet-adapter-wallets'
 		);
 
-		const walletsMap = [
-			// new PhantomWalletAdapter(),
-			// new SolflareWalletAdapter(),
-			// new TorusWalletAdapter()
-		];
+		const walletsMap = [new PhantomWalletAdapter(), new SolflareWalletAdapter()];
 
 		wallets = walletsMap;
 	});
 </script>
 
-<WalletProvider {localStorageKey} {wallets} autoConnect />
+<WalletProvider {localStorageKey} {wallets} />
 <slot />

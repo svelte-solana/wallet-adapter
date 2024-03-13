@@ -18,7 +18,8 @@
 		"@solana/wallet-adapter-wallets": "^0.19.31",
 		"@solana/web3.js": "^1.90.0",
 		"@svelte-solana/core": "workspace:*",
-		"@svelte-solana/ui": "workspace:*"
+		"@svelte-solana/ui": "workspace:*",
+		"@svelte-solana/headless-ui": "workspace:*"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.40.1",

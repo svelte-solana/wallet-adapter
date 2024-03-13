@@ -14,7 +14,7 @@ import { get, writable } from 'svelte/store';
 import { WalletNotSelectedError } from './errors.js';
 import { getLocalStorage, setLocalStorage } from './localStorage.js';
 
-interface Wallet {
+export interface Wallet {
     adapter: Adapter;
     readyState: WalletReadyState;
 }
@@ -355,6 +355,14 @@ function shouldAutoConnect(): boolean {
         connected ||
         connecting
     );
+}
+
+
+export function walletAddressSliced() {
+    const {publicKey, wallet} = get(walletStore)
+    const base58 = publicKey?.toBase58();
+    if (!wallet || !base58) return null;
+    return base58.slice(0, 4) + '..' + base58.slice(-4);
 }
 
 if (typeof window !== 'undefined') {
