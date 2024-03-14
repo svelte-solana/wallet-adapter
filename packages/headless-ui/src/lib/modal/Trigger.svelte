@@ -8,7 +8,7 @@
 	const { open } = getContext<ModalContext>('modal');
 </script>
 
-<button class={className} on:click={open}>
+<button class={`svelte-solana-modal-trigger ${className}`} on:click={open}>
 	<slot />
 </button>
 

@@ -8,7 +8,6 @@
 	const { close } = getContext<ModalContext>('modal');
 </script>
 
-<button on:click={close} class={className}>
+<button on:click={close} class={`svelte-solana-modal-close ${className}`}>
 	<slot />
 </button>
-
