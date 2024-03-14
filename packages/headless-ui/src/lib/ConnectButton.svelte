@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { walletStore, type Wallet, connect } from '@svelte-solana/core';
+	import "./style.css";
 
 	let className: string = '';
 	export { className as class };

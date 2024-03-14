@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { walletStore, getWalletAddressSliced, getConnectionStatus } from '@svelte-solana/core';
+	import "./style.css";
 
 	let className: string = '';
 	export { className as class };

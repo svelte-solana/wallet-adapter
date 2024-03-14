@@ -5,4 +5,5 @@ export {default as CopyAddressToClipboardButton} from "./CopyAddressToClipboardB
 export {default as WalletIcon} from "./Icon.svelte"
 export {default as WalletName} from "./Name.svelte"
 export {default as WalletDetected} from "./Detected.svelte"
-export {default as WalletAddress} from "./AddressButton.svelte"
+export {default as WalletAddress} from "./Address.svelte"
+export * as Modal from "./modal/index.js"

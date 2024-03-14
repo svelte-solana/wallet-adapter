@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Wallet } from '@svelte-solana/core';
+	import "./style.css";
 
 	export let wallet: Wallet;
 
